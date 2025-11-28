@@ -58,6 +58,12 @@ class MergeSorter {
             }
         }
     public:
+        void sort(vector<T>& array) {
+            if (array.size() <= 1) {
+                return;
+            }
+            mergeSortRecursive(array, 0, array.size() - 1);
+        }
 };
 
 #endif
