@@ -102,3 +102,21 @@ TEST(MergeSortTest, LargeArray) {
     EXPECT_EQ(arr.size(), 150);
     EXPECT_TRUE(is_sorted(arr.begin(), arr.end()));
 }
+
+TEST(MergeSortTest, LargeComplexArray) {
+    vector<int> arr;
+    for(int i=0; i<50; ++i) arr.push_back(i);
+    for(int i=0; i<50; ++i) arr.push_back(-i);
+    for(int i=0; i<20; ++i) arr.push_back(5);
+    for(int i=0; i<20; ++i) arr.push_back(-5);
+    
+    random_device rd;
+    mt19937 g(rd());
+    shuffle(arr.begin(), arr.end(), g);
+    
+    MergeSorter<int> sorter;
+    sorter.sort(arr);
+    
+    EXPECT_GE(arr.size(), 140);
+    EXPECT_TRUE(is_sorted(arr.begin(), arr.end()));
+}
