@@ -36,3 +36,11 @@ TEST(MergeSortTest, OnlyNegative) {
     sorter.sort(arr);
     EXPECT_EQ(arr, expected);
 }
+
+TEST(MergeSortTest, MixedNegativePositive) {
+    vector<int> arr = {-5, 10, 0, -3, 2};
+    vector<int> expected = {-5, -3, 0, 2, 10};
+    MergeSorter<int> sorter;
+    sorter.sort(arr);
+    EXPECT_EQ(arr, expected);
+}
