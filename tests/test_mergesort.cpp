@@ -51,3 +51,11 @@ TEST(MergeSortTest, EmptyArray) {
     EXPECT_NO_THROW(sorter.sort(arr));
     EXPECT_TRUE(arr.empty());
 }
+
+TEST(MergeSortTest, SingleElement) {
+    vector<int> arr = {42};
+    vector<int> expected = {42};
+    MergeSorter<int> sorter;
+    sorter.sort(arr);
+    EXPECT_EQ(arr, expected);
+}
