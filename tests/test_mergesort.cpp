@@ -13,3 +13,11 @@ TEST(MergeSortTest, AlreadySorted) {
     sorter.sort(arr);
     EXPECT_EQ(arr, expected);
 }
+
+TEST(MergeSortTest, ReverseSorted) {
+    vector<int> arr = {5, 4, 3, 2, 1};
+    vector<int> expected = {1, 2, 3, 4, 5};
+    MergeSorter<int> sorter;
+    sorter.sort(arr);
+    EXPECT_EQ(arr, expected);
+}
