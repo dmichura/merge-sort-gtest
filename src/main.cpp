@@ -16,15 +16,19 @@ int main() {
     vector<int> intTab = { 12, -5, 0, 7, 3, 12, -1, 49, 31 };
     MergeSorter<int> intSorter;
     
+    cout << "NO SORT | ";
     printArray(intTab);
     intSorter.sort(intTab);
+    cout << "SORTED  | ";
     printArray(intTab);
 
     vector<double> doubleTab = { 3.14, -1.1, 0.0, 2.5, 3.14, -0.5, -4.4, 5.96 };
     MergeSorter<double> doubleSorter;
-    
+
+    cout << "NO SORT | ";
     printArray(doubleTab);
     doubleSorter.sort(doubleTab);
+    cout << "SORTED  | ";
     printArray(doubleTab);
     return 0;
 }
