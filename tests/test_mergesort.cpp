@@ -21,3 +21,10 @@ TEST(MergeSortTest, ReverseSorted) {
     sorter.sort(arr);
     EXPECT_EQ(arr, expected);
 }
+
+TEST(MergeSortTest, RandomArray) {
+    vector<int> arr = {10, 2, 8, 1, 5, 9};
+    MergeSorter<int> sorter;
+    sorter.sort(arr);
+    EXPECT_TRUE(is_sorted(arr.begin(), arr.end()));
+}
