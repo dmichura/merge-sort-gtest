@@ -91,3 +91,14 @@ TEST(MergeSortTest, TwoElementsSorted) {
     sorter.sort(arr);
     EXPECT_EQ(arr, expected);
 }
+
+TEST(MergeSortTest, LargeArray) {
+    vector<int> arr(150);
+    generate(arr.begin(), arr.end(), rand);
+    
+    MergeSorter<int> sorter;
+    sorter.sort(arr);
+    
+    EXPECT_EQ(arr.size(), 150);
+    EXPECT_TRUE(is_sorted(arr.begin(), arr.end()));
+}
