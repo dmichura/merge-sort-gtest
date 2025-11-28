@@ -67,3 +67,11 @@ TEST(MergeSortTest, Duplicates) {
     sorter.sort(arr);
     EXPECT_EQ(arr, expected);
 }
+
+TEST(MergeSortTest, NegativeDuplicates) {
+    vector<int> arr = {-3, -1, -2, -3, -1};
+    vector<int> expected = {-3, -3, -2, -1, -1};
+    MergeSorter<int> sorter;
+    sorter.sort(arr);
+    EXPECT_EQ(arr, expected);
+}
