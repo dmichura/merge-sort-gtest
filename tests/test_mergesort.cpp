@@ -44,3 +44,10 @@ TEST(MergeSortTest, MixedNegativePositive) {
     sorter.sort(arr);
     EXPECT_EQ(arr, expected);
 }
+
+TEST(MergeSortTest, EmptyArray) {
+    vector<int> arr = {};
+    MergeSorter<int> sorter;
+    EXPECT_NO_THROW(sorter.sort(arr));
+    EXPECT_TRUE(arr.empty());
+}
