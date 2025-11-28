@@ -28,3 +28,11 @@ TEST(MergeSortTest, RandomArray) {
     sorter.sort(arr);
     EXPECT_TRUE(is_sorted(arr.begin(), arr.end()));
 }
+
+TEST(MergeSortTest, OnlyNegative) {
+    vector<int> arr = {-5, -1, -10, -3, -2};
+    vector<int> expected = {-10, -5, -3, -2, -1};
+    MergeSorter<int> sorter;
+    sorter.sort(arr);
+    EXPECT_EQ(arr, expected);
+}
