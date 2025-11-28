@@ -59,3 +59,11 @@ TEST(MergeSortTest, SingleElement) {
     sorter.sort(arr);
     EXPECT_EQ(arr, expected);
 }
+
+TEST(MergeSortTest, Duplicates) {
+    vector<int> arr = {3, 1, 2, 3, 1};
+    vector<int> expected = {1, 1, 2, 3, 3};
+    MergeSorter<int> sorter;
+    sorter.sort(arr);
+    EXPECT_EQ(arr, expected);
+}
