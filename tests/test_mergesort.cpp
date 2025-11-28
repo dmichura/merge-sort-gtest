@@ -83,3 +83,11 @@ TEST(MergeSortTest, MixedDuplicates) {
     sorter.sort(arr);
     EXPECT_EQ(arr, expected);
 }
+
+TEST(MergeSortTest, TwoElementsSorted) {
+    vector<int> arr = {1, 2};
+    vector<int> expected = {1, 2};
+    MergeSorter<int> sorter;
+    sorter.sort(arr);
+    EXPECT_EQ(arr, expected);
+}
