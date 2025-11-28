@@ -1,0 +1,7 @@
+# builded file
+main
+/docs/
+build
+
+# vs-code
+/.vscode/
