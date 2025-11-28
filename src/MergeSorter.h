@@ -47,6 +47,16 @@ class MergeSorter {
                 k++;
             }
         }
+        void mergeSortRecursive(vector<T>& array, int left, int right) {
+            if (left < right) {
+                int mid = left + (right - left) / 2;
+
+                mergeSortRecursive(array, left, mid);
+                mergeSortRecursive(array, mid + 1, right);
+
+                merge(array, left, mid, right);
+            }
+        }
     public:
 };
 
